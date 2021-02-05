@@ -4,7 +4,10 @@
   "description": "Downloads the version of ChromeDriver matching the local Chrome installation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "chromedriverdl": "node index.js"
+  },
+  "bin": {
+    "chromedriverdl": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,6 @@
     "camaro": "^6.1.0",
     "find-chrome-version": "^2.1.1",
     "unzipper": "^0.10.11"
-  }
+  },
+  "preferGlobal": true
 }
