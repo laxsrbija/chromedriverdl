@@ -1,0 +1,24 @@
+{
+  "name": "chromedriverdl",
+  "version": "1.0.0",
+  "description": "Downloads the version of ChromeDriver matching the local Chrome installation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laxsrbija/chromedriverdl.git"
+  },
+  "author": "Lazar Stanojević",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laxsrbija/chromedriverdl/issues"
+  },
+  "homepage": "https://github.com/laxsrbija/chromedriverdl",
+  "dependencies": {
+    "camaro": "^6.1.0",
+    "find-chrome-version": "^2.1.1",
+    "unzipper": "^0.10.11"
+  }
+}
