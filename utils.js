@@ -20,7 +20,7 @@ exports.getChromeDriver = async function () {
 
 const downloadChromeDriver = async function (driverVersion, platform) {
 	const driverUrl = CHROME_DRIVER_REPOSITORY + driverVersion + '/chromedriver_' + platform + '.zip';
-	const downloadPath = process.env.PWD;
+	const downloadPath = process.cwd();
 	return https.get(driverUrl, res => res.pipe(unzip.Extract({path: downloadPath})));
 };
 
