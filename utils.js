@@ -6,7 +6,7 @@ const { transform } = require('camaro');
 
 const CHROME_DRIVER_REPOSITORY = 'https://chromedriver.storage.googleapis.com/';
 
-exports.getChromeDriver = async function () {
+exports.getChromeDriver = async function (downloadDestination) {
 	const availableDrivers = await getAvailableDriverVersions();
 	const chromeVersion = await findChromeVersion();
 
@@ -14,14 +14,13 @@ exports.getChromeDriver = async function () {
 	const platform = getPlatformInfo();
 
 	console.log('Installed Chrome has version ' + chromeVersion);
-	console.log('Downloading ChromeDriver ' + closestDriverVersion + ' for ' + platform + '...');
-	await downloadChromeDriver(closestDriverVersion, platform);
+	console.log('Downloading ChromeDriver ' + closestDriverVersion + ' for ' + platform + ' to ' + downloadDestination);
+	await downloadChromeDriver(closestDriverVersion, platform, downloadDestination);
 };
 
-const downloadChromeDriver = async function (driverVersion, platform) {
+const downloadChromeDriver = async function (driverVersion, platform, downloadDestination) {
 	const driverUrl = CHROME_DRIVER_REPOSITORY + driverVersion + '/chromedriver_' + platform + '.zip';
-	const downloadPath = process.cwd();
-	return https.get(driverUrl, res => res.pipe(unzip.Extract({path: downloadPath})));
+	return https.get(driverUrl, res => res.pipe(unzip.Extract({path: downloadDestination})));
 };
 
 const findClosestDriverVersion = function (targetVersion, availableDrivers) {
