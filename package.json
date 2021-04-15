@@ -13,6 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/laxsrbija/chromedriverdl.git"
   },
+  "keywords": [
+    "cli",
+    "chrome",
+    "chromedriver"
+  ],
   "author": "Lazar Stanojević",
   "license": "MIT",
   "bugs": {
