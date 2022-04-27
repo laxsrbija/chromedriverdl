@@ -26,7 +26,7 @@
   "homepage": "https://github.com/laxsrbija/chromedriverdl",
   "dependencies": {
     "camaro": "^6.1.0",
-    "find-chrome-version": "^2.1.1",
+    "find-chrome-version": "^2.2.0",
     "unzipper": "^0.10.11",
     "yargs": "^16.2.0"
   },
