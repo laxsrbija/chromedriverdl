@@ -1,6 +1,6 @@
 {
   "name": "chromedriverdl",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Downloads the version of ChromeDriver matching the local Chrome installation",
   "main": "index.js",
   "scripts": {
